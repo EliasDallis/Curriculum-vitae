@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body_block %}
+<div class="jumbotron" style="background-image:linear-gradient(to right, #ffffff, #bfbbbb)!important;">
+<!-- <h1>Elias Dallis - Curriculum Vitae</h1> -->
+<h3></h3>
+    
+    <h1>Portfolio</h1>
+
+
+{% for item in portfolioitems %}
+</br>
+    <hr class="my-4">
+</br>
+</br>
+    <h2>{{ item.title }}</h2>
+    <hr class="my-4">
+
+    <p>{{ item.text|safe|linebreaksbr }}</p>
+{% endfor %}
+
+</br>
+    <hr class="my-4">
+</br>
+</br>
+
+    <h2>Logistics Application Design - Python</h2>
+    <hr class="my-4">
+
+    <p>My first Python application was a logistics management system, 
+        designed to display information from spreadsheets whilst allowing 
+        other users access to the sheets. It was conceived to solve the issue 
+        of having to open up a spreadsheet, to enter or display specific 
+        information when this would prevent access by other users. This application centralises all the
+        key information and only accesses the file briefly upon save, thus maintaining access. It was based on
+        existing ERP software and designed to allow full CRUD functionality.
+    </p>
+    
+    <img src="{% static 'LMS_MainMenu.png'%}" width="80%">
+    
+    </br>
+    </br>
+    <p>It displays pending shipments to assist with planning and organisation, reducing the chances of anything being missed:</p>
+    </br>
+    
+    
+    <img src="{% static 'LMS_PendingView.png'%}" width="80%">
+    
+    </br>
+    </br>
+    <p>It is fully searchable, with a detail view:</p>
+    </br>
+    
+    <img src="{% static 'LMS_Search1.png'%}" width="80%">
+    </br>
+    <img src="{% static 'LMS_Search2.png'%}" width="80%">
+    </br>
+   
+    <hr class="my-4">
+</br>
+</br>
+
+    <h2>Music - Guitar/Rock</h2>
+    <hr class="my-4">
+    <p>My real passion is music - I play electric guitar, bass, drums, and sing and write songs. 
+        The tracks below are my original compositions performed with my former band 'My Estranged'. 
+        Recorded by <a href="http://saltwellstudio.co.uk/">Chris Pepper</a></p>
+    
+            <iframe width="80%" height="125" scrolling="no" frameborder="1" allow="autoplay" style="border:2px solid #fa3743;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/88557750&color=%2330090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="80%" height="125" scrolling="no" frameborder="1" allow="autoplay" style="border:2px solid #c0050f;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/134471436&color=%2330090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="80%" height="125" scrolling="no" frameborder="1" allow="autoplay" style="border:2px solid #8c040b;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/131734871&color=%2330090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="80%" height="125" scrolling="no" frameborder="1" allow="autoplay" style="border:2px solid #6c0206;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133094307&color=%2330090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="80%" height="125" scrolling="no" frameborder="1" allow="autoplay" style="border:2px solid #30090b;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/203707842&color=%2330090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        
+    
+    
+    </br>
+    <hr class="my-4">
+
+</br>
+</br>
+    <h2>Music - Electronic</h2>
+    <hr class="my-4">
+    <p>I spent two years studying audio and music technology and have also experimented with composing electronic music. 
+        I composed and produced the examples below using Reason 4.0 and FruityLoops 8.0:</p></br>
+    
+    <iframe width="80%" height="125" scrolling="no" frameborder="1" allow="autoplay" style="border:2px solid #30090b;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1427675&color=%23fbf208&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    <iframe width="80%" height="125" scrolling="no" frameborder="1" allow="autoplay" style="border:2px solid #30090b;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1477761&color=%23fbf208&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    <iframe width="80%" height="125" scrolling="no" frameborder="1" allow="autoplay" style="border:2px solid #30090b;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1467742&color=%23fbf208&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    
+    <hr class="my-4">
+    </br>
+    </br>
+    <h2>Art</h2>
+    <hr class="my-4">
+    <p>Another hobby of mine is art and design. I painted this piece in 2008 to celebrate my graduation:</p>
+    
+    <img src="{% static 'painting1.jpg' %}" width="80%">
+    
+
+</div>
+{% endblock%}

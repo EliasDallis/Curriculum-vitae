@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+
+{% block body_block %}
+<div class="jumbotron" style="background-image:linear-gradient(to right, #ffffff, #bfbbbb)!important;">
+<!-- <h1>Elias Dallis - Curriculum Vitae</h1> -->
+<h3></h3>
+    
+    <h1>Education</h1>
+    <hr class="my-4">
+    <ul>
+        <h1></h1>
+        {% for y in view.previouscourses %}
+        <div class ="row">
+            <div class="col-md-4">
+                <h3><em>{{ y.course_name }}</em></h3>
+                <h5>{{y.course_provider}}</h5>    
+                <h6>{{y.course_start|date:"M Y"}} - {{y.course_start|date:"M Y"}}</h6><h4>{{y.course_grade}}</h4>
+            </div>
+            <div class="col-md-8">
+                <h5><br><p>{{y.course_desc|safe|linebreaksbr}}</p></h5>
+            </div>
+        </div>
+
+        {% endfor %}
+
+
+        </br>
+        </br>
+    </ul>
+        <h1>Skills</h1>
+    <hr class="my-4">
+    
+    <ul>
+        <h1></h1>
+        {% for sk in view.skill %}
+        <div class ="row">
+            <div class="col-md-4">
+                <h3><em>{{sk.skill_name }}</em></h3>
+                
+            </div>
+            <div class="col-md-8">
+                <h5><br><p>{{sk.skill_desc|safe|linebreaksbr}}</p></h5>
+            </div>
+        </div>
+
+        {% endfor %}
+
+        <!-- add skills section - db = skills -- new model -- skill + description/demonstration -->
+
+    <ul>  
+
+
+
+</div>
+{% endblock %}

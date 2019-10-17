@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block body_block %}
+<div class="jumbotron" style="background-image:linear-gradient(to right, #ffffff, #bfbbbb)!important;">
+<!-- <h1>Elias Dallis - Curriculum Vitae</h1> -->
+
+    <div class='row'> 
+        <div class="col-md-9" >  
+            <h1>Biography</h1>
+            <h2>
+            
+        </div>
+        <div class="col-md-3">
+            </h2><img class="img-thumbnail" src="{% static 'frown2.jpg' %}" alt="My image" width=200>
+        </div>
+    </div>
+    <hr class="my-4">
+    <h3></h3>
+    <ul>
+            {% for z in biolist %}
+            <h2>{{z.bio_para1|safe|linebreaksbr}}</h2><div><h3>{{z.bio_para2|safe|linebreaksbr}}</h3></div><p></p>
+            <p>{{z.bio_para3|safe|linebreaksbr}}<p>
+            {% endfor %}
+    </ul>
+
+</div>
+{% endblock%}

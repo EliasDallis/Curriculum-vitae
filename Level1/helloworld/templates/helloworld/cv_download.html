@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static "index.css" %}">
+{% block body_block %}
+
+
+<h3>CV Download</h3>
+
+    <div id="labelgroup">
+        <div class="jumbotron" style="background-image:linear-gradient(to right, #ffffff, #bfbbbb)!important;">
+        
+            <div style="text-align:top;">
+                <h2>PDF download - Elias Dallis CV</h2>
+                <h3>
+                        <a href="{% static 'Elias_Dallis_CV_EN.pdf' %} " download=""><img width="25px" src="{% static "gb-flag.jpg" %}">  English</a>
+                </h3>
+                <h3>
+                        <a href="{% static 'Elias_Dallis_CV_DE.pdf' %} " download=""><img width="25px" src="{% static "de-flag.png" %}">  Deutsch</a>
+                </h3>
+            </div>
+            
+        
+        </div>
+    </div>
+{% endblock %}

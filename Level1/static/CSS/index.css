@@ -1,0 +1,125 @@
+.turnred{
+    color : black;
+  }
+
+.art{
+  margin: auto;
+  align-self: center;  
+}
+
+td{
+  
+  height: 225px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+#one{
+  font: Tahoma;
+  width: 228px; /*150px;*/
+  color : #202020;
+  background-color: #0c0001ff;
+  opacity: 1;
+}
+#one{
+  transition: background-color 2s;
+}
+#one:hover{   
+  background-color: #0c000164;
+}
+
+
+
+#two{
+  width: 228px; /*243px;*/
+  color: #6c0206;
+  background-color: #4c0206ff;
+}
+#two{
+  transition: background-color 2s;
+}
+#two:hover{   
+  background-color:#4c020664;
+}
+
+#three{
+  width: 228px; /* 393px;*/
+  color: #ac040b;
+  background-color: #8c040bff;
+}
+#three{
+  transition: background-color 2s;
+}
+#three:hover{   
+  background-color:#8c040b3c;
+}
+#four{
+  width: 228px; /*243px*/
+  background-color: #98040fff;
+  color: #c0050f;
+}
+#four{
+  transition: background-color 2s;
+}
+#four:hover{   
+  background-color:#c0050f3c;
+}
+#five{
+  width: 228px; /*150px;*/
+  color: #d0151f;
+  background-color: #f40713ff;
+}
+#five{
+  transition: background-color 2s;
+}
+#five:hover{   
+  background-color:#f4071320;
+}
+.rotateimg180 {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  }
+
+#ein{
+  width: 20%; /*150px;*/
+  background-image: linear-gradient(to right, #0c0001 , #4c0206);
+  /* background-color: #0c0001; */
+  height: 100px;
+}
+#zwei{
+  width: 20%; /*150px;*/
+  background-image: linear-gradient(to right, #4c0206,#8c040b);
+  height: 100px;
+}
+#drei{
+  width: 20%; /*150px;*/
+  background-image: linear-gradient(to right,#8c040b,#c0050f);
+  height: 100px;
+}
+#vier{
+  width: 20%; /*150px;*/
+  background-image: linear-gradient(to right,#c0050f,#f40713);
+  height: 100px;
+}
+#funf{
+  width: 20%; /*150px;*/
+  background-image: linear-gradient(to right,#f40713,#ffffff);
+  height: 100px;
+}
+
+/* #id_message{
+  vertical-align: top;
+} */
+
+label{
+  width: 130px;
+  vertical-align: top;
+}
+
+.jumbotron{
+  background-color: #7c7a7a!important;
+}

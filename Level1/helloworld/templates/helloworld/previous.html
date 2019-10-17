@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block body_block %}
+<div class="jumbotron" style="background-image:linear-gradient(to right, #ffffff, #bfbbbb)!important;">
+<!-- <h1>Elias Dallis - Curriculum Vitae</h1> -->
+<h1></h1>
+    <h1>Experience</h1>
+    <hr class="my-4">
+    <ul>
+        {% for x in previousfirms %}
+        <li><h2><em>{{x.job_title}}</em></h2><div><h3>{{x.title_company}}</h3></div><h4>{{x.start_date|date:"M Y"}} - {{x.end_date|date:" M Y"}}</h4><p></p>
+        <p>{{x.job_desc|safe|linebreaksbr}}<p></li>
+        </br>
+        <hr class="my-4">
+        </br>
+        {% endfor %}
+    </ul>
+      
+
+
+
+</div>
+{% endblock %}

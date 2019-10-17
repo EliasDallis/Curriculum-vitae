@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="{% static "index.css" %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elias Dallis Homepage</title>
+    <style>
+            .art2 {cursor: pointer;}
+    </style>
+</head>
+<body style="background-color: #948787;">
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="{% url 'helloworld:index' %}" class="navbar-brand">Elias Dallis</a>
+            </div>
+        <ul class="nav navbar-nav">
+            
+            <li><a href="{% url 'helloworld:bio' %}">Biography</a></li>
+            <li><a href="{% url 'helloworld:list' %}">Experience</a></li>
+            <li><a href="{% url 'helloworld:courses' %}">Education</a></li>
+
+            <li><a href="{% url 'helloworld:portfolio' %}">Portfolio</a></li>
+            <li><a href="{% url 'helloworld:contact_one' %}">Contact</a></li>
+            
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'helloworld:download' %}">PDF Download <img width="20px" src="{% static "gb-flag.jpg" %}"> <img width="20px" src="{% static "de-flag.png" %}"></a></li>
+                
+                
+
+        </ul>
+        </div>
+    </nav>
+    
+    <div>
+            <table class='art' style="width: 100%;">
+                <tr>
+                    <td id='ein'></td>
+                    <td id='zwei'></td>
+                    <td id='drei'></td>
+                    <td id='vier'></td>
+                    <td id='funf'></td>
+                </tr>
+
+            </table>
+
+        </div>
+    
+    <p></p>
+    <div class="container">
+            <div class="jumbotron" style="background-color: #bfbbbb!important;">
+                    <!-- <h3>Elias Dallis - <em>Curriculum Vitae</em></h3>
+                        <P></P>
+                    <hr class="my-4"> -->
+                    {% block body_block %}
+                    {% endblock %}
+            </div>
+            
+            <div>
+                <table class='art art2'>
+                    <tr>
+                        <td onclick="location.href='{% url 'helloworld:bio'%}'"id='one'></a><h2>Bio</h2></td>
+                        <td onclick="location.href='{% url 'helloworld:list'%}'" id='two'><h2>Experience</h2></td>
+                        <td onclick="location.href='{% url 'helloworld:courses'%}'" id='three'><h2>Education</h2></td>
+                        <td onclick="location.href='{% url 'helloworld:portfolio'%}'"id='four'><h2>Portfolio</h2></td>
+                        <td onclick="location.href='{% url 'helloworld:contact_one'%}'"id='five'><h2>Contact</h2></td>
+                    </tr>
+    
+                </table>
+
+            </div>
+            
+
+            
+
+    </div>
+</br>
+<!-- <hr class="my-4"> -->
+</br>
+
+</body>
+
+<!-- Footer -->
+<footer style="background-color: #878080" class="page-footer font-small pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-left text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-8 mt-md-0 mt-3">
+  
+          <!-- Content -->
+          <h5>Built using: Django 2.2 / Python 3.6 / sqlite3</h5>
+          
+          <p><a href="{% url 'admin:index' %}">Admin</a></p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- <hr class="clearfix w-100 d-md-none pb-3"> -->
+  
+        <!-- Grid column -->
+        <div style="text-align: center;" class="col-md-2 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5>Django Official Site:</h5>
+  
+          <ul  class="list-unstyled">
+            <li>
+              <a href="https://www.djangoproject.com/"><img src="{% static 'django-logo.png' %}" width="50"></a>
+            </li>
+            
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div style="text-align: center;" class="col-md-2 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5>My LinkedIn:</h5>
+  
+          <ul  class="list-unstyled">
+            <li>
+              <a href="https://www.linkedin.com/in/elias-dallis-74880171/"><img src="{% static 'LI-Logo.png' %}" width="75"></a>
+            </li>
+            
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© Elias Dallis 2019
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+</html>

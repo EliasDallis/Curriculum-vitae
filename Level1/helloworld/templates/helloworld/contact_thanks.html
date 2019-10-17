@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static "index.css" %}">
+{% block body_block %}
+
+
+<!-- <h3>Contact</h3> -->
+
+    <div id="labelgroup">
+        <div class="jumbotron" style="background-image:linear-gradient(to right, #ffffff, #bfbbbb)!important;">
+        
+            <div style="text-align:top;">
+
+                <h2>
+                    Thanks for your message {{ customer }}!
+                </h2>
+                <h5><a href="{% url 'helloworld:index' %}">Home</a></h5>
+            </div>
+            
+        
+        </div>
+    </div>
+{% endblock %}
